@@ -2,27 +2,38 @@ doctype html
 html lang="en"
   head
     meta charset="utf-8"
-    meta name="viewport" content="width=device-width, initial-scale=1.0"
     meta name="robots" content="index, follow"
-    meta name="description" content=strip_tags(yield :title)
-    meta name="author" content="Daniel Weinmann"
-    title= "#{"#{strip_tags(yield :title)} · " if content_for?(:title)} Ganas"
+    meta name="viewport" content="initial-scale=1.0, width=device-width"
+    - if content_for? :meta_tags
+      / Page specific meta tags
+      = yield :meta_tags
+    - else
+      / Meta tags for pages that don't have specific meta tags
+      meta name="description" content=strip_tags(yield :title)
+      meta name="keywords" content="#{yield :title} Ganas"
+      meta property="og:title" content=yield(:title)
+      meta property="og:type" content="website"
+      meta property="og:url" content=(content_for?(:url) ? yield(:url) : request.url)
+      meta property="og:image" content=="#{request.protocol}#{request.host_with_port}#{image_path("logo_facebook.png")}"
+      meta property="og:description" content=yield(:title)
+      meta name="author" content="Laura Rosa & Daniel Weinmann"
+    / Metatags for every page
+    meta property="og:site_name" content="Ganas"
+    meta property="fb:app_id" content=ENV['FACEBOOK_APP_ID']
+    meta property="fb:admins" content=ENV['FACEBOOK_ADMINS']
+    title== "#{"#{strip_tags(yield :title)} · " if content_for?(:title)} Ganas"
     = stylesheet_link_tag "application"
     = javascript_include_tag "vendor/modernizr"
     = javascript_include_tag "application"
     = csrf_meta_tag
   body[data-namespace="#{namespace}" data-controller="#{controller_name}" data-action="#{action_name}" data-locale="#{I18n.locale}"]
-    .fixed.contain-to-grid
-      nav class="top-bar" data-topbar="true" role="navigation"
-        ul class="title-area"
-          li class="name"
-            h1= link_to 'Ganas', root_path
-          li class="toggle-topbar"
-            section class="top-bar-section"
-              ul class="right"
+    #header_wrapper
+      = image_tag 'photo.jpg', class: 'right'
+      #header.row
+        h1 Tango <small>salón<br/>com</small> Ganas
+        / h1 Ganas
+        / h2 Laura Rosa <small>&</small> Daniel Weinmann
     #content.row
-      - if content_for?(:title)
-        h1= yield :title
       - for key, msg in flash
         - unless key == :timedout
           - key = "success" if key == "notice"
