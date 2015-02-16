@@ -15,6 +15,7 @@
 //= require pickadate/picker
 //= require pickadate/picker.date
 //= require foundation
+//= require foundation/foundation.magellan
 //= require underscore
 //= require backbone
 //= require ganas

@@ -96,7 +96,7 @@ $font-family-sans-serif: 'Oswald', sans-serif;
 $font-weight-normal: 300 !default;
 $font-weight-bold: 400 !default;
 
-// $white       : #FFFFFF;
+$white       : #FFFFFF;
 // $ghost       : #FAFAFA;
 // $snow        : #F9F9F9;
 // $vapor       : #F6F6F6;
@@ -798,7 +798,7 @@ $button-tny: rem-calc(12);
 
 // $include-html-magellan-classes: $include-html-classes;
 
-// $magellan-bg: $white;
+$magellan-bg: $pink;
 // $magellan-padding: 0 !important;
 
 // 18. Off-canvas
@@ -1207,17 +1207,17 @@ $panel-margin-bottom: rem-calc(40);
 
 // We use this to control the definition
 // $sub-nav-font-family: $body-font-family;
-// $sub-nav-font-size: rem-calc(14);
-// $sub-nav-font-color: $aluminum;
+$sub-nav-font-size: rem-calc(20);
+$sub-nav-font-color: $white;
 // $sub-nav-font-weight: $font-weight-normal;
 // $sub-nav-text-decoration: none;
 // $sub-nav-padding: rem-calc(3 16);
 // $sub-nav-border-radius: 3px;
-// $sub-nav-font-color-hover: scale-color($sub-nav-font-color, $lightness: -25%);
+$sub-nav-font-color-hover: $skin;
 
 // We use these to control the active item styles
 // $sub-nav-active-font-weight: $font-weight-normal;
-// $sub-nav-active-bg: $primary-color;
+// $sub-nav-active-bg: red;
 // $sub-nav-active-bg-hover: scale-color($sub-nav-active-bg, $lightness: -14%);
 // $sub-nav-active-color: $white;
 // $sub-nav-active-padding: $sub-nav-padding;
