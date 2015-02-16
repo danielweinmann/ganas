@@ -110,7 +110,7 @@ $white       : #FFFFFF;
 // $jumbo       : #888888;
 // $monsoon     : #777777;
 // $steel       : #666666;
-// $charcoal    : #555555;
+$charcoal    : #555555;
 // $tuatara     : #444444;
 // $oil         : #333333;
 // $jet         : #222222;
@@ -201,14 +201,14 @@ $body-font-color: $brown;
 // $header-font-style: normal;
 $header-font-color: $skin;
 $header-line-height: 1.2;
-// $header-top-margin: .2rem;
-// $header-bottom-margin: 0rem;
+$header-top-margin: 2rem;
+$header-bottom-margin: 2rem;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
 $h1-font-size: rem-calc(132);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
+$h2-font-size: rem-calc(52);
+$h3-font-size: rem-calc(38);
 // $h4-font-size: rem-calc(23);
 // $h5-font-size: rem-calc(18);
 // $h6-font-size: 1rem;
@@ -448,7 +448,7 @@ $button-tny: rem-calc(12);
 // We use these to control button border and hover styles.
 // $button-border-width: 0px;
 // $button-border-style: solid;
-// $button-bg-color: $primary-color;
+$button-bg-color: $brown;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
@@ -980,18 +980,18 @@ $panel-margin-bottom: rem-calc(40);
 // $include-html-pricing-classes: $include-html-classes;
 
 // We use this to control the border color
-// $price-table-border: solid 1px $gainsboro;
+$price-table-border: solid 1px $skin;
 
 // We use this to control the bottom margin of the pricing table
 // $price-table-margin-bottom: rem-calc(20);
 
 // We use these to control the title styles
-// $price-title-bg: $oil;
+$price-title-bg: $skin;
 // $price-title-padding: rem-calc(15 20);
 // $price-title-align: center;
-// $price-title-color: $smoke;
+$price-title-color: $brown;
 // $price-title-weight: $font-weight-normal;
-// $price-title-size: rem-calc(16);
+$price-title-size: rem-calc(24);
 // $price-title-font-family: $body-font-family;
 
 // We use these to control the price styles
@@ -1008,16 +1008,16 @@ $panel-margin-bottom: rem-calc(40);
 // $price-desc-color: $monsoon;
 // $price-desc-padding: rem-calc(15);
 // $price-desc-align: center;
-// $price-desc-font-size: rem-calc(12);
+$price-desc-font-size: rem-calc(15);
 // $price-desc-weight: $font-weight-normal;
 // $price-desc-line-height: 1.4;
 // $price-desc-bottom-border: dotted 1px $gainsboro;
 
 // We use these to control the list item styles
-// $price-item-color: $oil;
+$price-item-color: $charcoal;
 // $price-item-padding: rem-calc(15);
 // $price-item-align: center;
-// $price-item-font-size: rem-calc(14);
+$price-item-font-size: rem-calc(16);
 // $price-item-weight: $font-weight-normal;
 // $price-item-bottom-border: dotted 1px $gainsboro;
 

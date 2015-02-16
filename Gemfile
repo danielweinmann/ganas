@@ -33,6 +33,7 @@ gem 'simple_form'
 gem 'jbuilder'
 gem 'pickadate-rails'
 gem 'backbone-on-rails'
+gem 'foundation-icons-sass-rails'
 
 group :test, :development do
   gem 'rspec-rails'
