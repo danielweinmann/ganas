@@ -106,17 +106,11 @@ html lang="en"
                 = mail_to 'contato@ganas.com.br', 'Quero me inscrever', class: 'button'
       #photos data-magellan-destination="photos"
         h3 Fotos
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
+        ul class="clearing-thumbs small-block-grid-3 medium-block-grid-5" data-clearing="true"
+          - (1..9).each do |photo|
+            li
+              a href=image_path("photos/0#{photo}.jpg")
+                = image_tag "photos/0#{photo}_th.jpg", class: 'th'
       #videos data-magellan-destination="videos"
         h3 Vídeos
         p Bla bla bla whiskas sachê
