@@ -46,8 +46,8 @@ html lang="en"
               a href="#newsletter" Novidades
             dd data-magellan-arrival="contact"
               a href="#contact" Contato
-    #content.row
-      #classes data-magellan-destination="classes"
+    #classes_wrapper
+      #classes.content.row data-magellan-destination="classes"
         h3 Aulas
         .row
           .columns.small-12.medium-4
@@ -104,49 +104,35 @@ html lang="en"
               li class="bullet-item" R$ 200 casal (terças + quintas)
               li class="cta-button"
                 = mail_to 'contato@ganas.com.br', 'Quero me inscrever', class: 'button'
-      #photos data-magellan-destination="photos"
+    #photos_wrapper
+      #photos.content.row data-magellan-destination="photos"
         h3 Fotos
         ul class="clearing-thumbs small-block-grid-3 medium-block-grid-5" data-clearing="true"
           - (1..9).each do |photo|
             li
               a href=image_path("photos/0#{photo}.jpg")
                 = image_tag "photos/0#{photo}_th.jpg", class: 'th'
-      #videos data-magellan-destination="videos"
+    #videos_wrapper
+      #videos.content.row data-magellan-destination="videos"
         h3 Vídeos
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-      #newsletter data-magellan-destination="newsletter"
+        .flex-video
+          iframe width="614" height="345" src="http://www.youtube.com/embed/RzE5RFCQFfU?showinfo=0&controls=0" frameborder="0" allowfullscreen
+        p Inscreva-se em nosso #{ link_to 'canal no YouTube', 'http://youtube.com/subscription_center?add_user=ganastango', target: :blank } e veja mais vídeos!
+    #newsletter_wrapper
+      #newsletter.content.row data-magellan-destination="newsletter"
         h3 Novidades
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-      #contact data-magellan-destination="contact"
+        = form_tag "http://ganas.us10.list-manage.com/subscribe/post"
+          = hidden_field_tag 'u', '1f48ce3370d35fb1232544e29'
+          = hidden_field_tag 'id', '367de329f4'
+          = label_tag 'EMAIL', 'Receba nossas novidades em seu email'
+          = text_field_tag 'EMAIL', nil, placeholder: 'seu@email.com', label: 'email'
+          = submit_tag "Quero receber novidades por email"
+    #contact_wrapper
+      #contact.content.row data-magellan-destination="contact"
         h3 Contato
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
-        p Bla bla bla whiskas sachê
+        ul class="vcard small-6 small-offset-3 columns"
+          li class="fn" Laura Rosa e Daniel Weinmann
+          li class="org" Ganas
+          li class="email"
+            a href="mailto:contato@ganas.com.br" contato@ganas.com.br
+          li class="tel" 51 9904-3244

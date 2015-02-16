@@ -117,7 +117,7 @@ $charcoal    : #555555;
 // $black       : #000000;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+$primary-color: $brown;
 // $secondary-color: #e7e7e7;
 $alert-color: #eb7c8f;
 // $success-color: #43AC6A;
@@ -126,7 +126,7 @@ $alert-color: #eb7c8f;
 
 // We use these to control various global styles
 $body-bg: $navy;
-$body-font-color: $brown;
+$body-font-color: $skin;
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
@@ -201,7 +201,7 @@ $body-font-color: $brown;
 // $header-font-style: normal;
 $header-font-color: $skin;
 $header-line-height: 1.2;
-$header-top-margin: 2rem;
+// $header-top-margin: 2rem;
 $header-bottom-margin: 2rem;
 // $header-text-rendering: optimizeLegibility;
 
@@ -291,17 +291,17 @@ $small-font-color: $brown;
 // $acronym-underline: 1px dotted $gainsboro;
 
 // We use these to control padding and margin
-// $microformat-padding: rem-calc(10 12);
+$microformat-padding: rem-calc(20 24);
 // $microformat-margin: rem-calc(0 0 20 0);
 
 // We use these to control the border styles
 // $microformat-border-width: 1px;
 // $microformat-border-style: solid;
-// $microformat-border-color: $gainsboro;
+$microformat-border-color: $skin;
 
 // We use these to control full name font styles
-// $microformat-fullname-font-weight: $font-weight-bold;
-// $microformat-fullname-font-size: rem-calc(15);
+$microformat-fullname-font-weight: $font-weight-normal;
+$microformat-fullname-font-size: rem-calc(42);
 
 // We use this to control the summary font styles
 // $microformat-summary-font-weight: $font-weight-bold;
@@ -448,7 +448,7 @@ $button-tny: rem-calc(12);
 // We use these to control button border and hover styles.
 // $button-border-width: 0px;
 // $button-border-style: solid;
-$button-bg-color: $brown;
+$button-bg-color: $primary-color;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
 // $secondary-button-bg-hover: scale-color($secondary-color, $lightness: $button-function-factor);
@@ -1212,8 +1212,8 @@ $sub-nav-font-color: $white;
 // $sub-nav-font-weight: $font-weight-normal;
 // $sub-nav-text-decoration: none;
 // $sub-nav-padding: rem-calc(3 16);
-// $sub-nav-border-radius: 3px;
-$sub-nav-font-color-hover: $skin;
+$sub-nav-border-radius: 5px;
+$sub-nav-font-color-hover: $white;
 
 // We use these to control the active item styles
 // $sub-nav-active-font-weight: $font-weight-normal;
