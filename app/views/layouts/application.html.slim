@@ -45,7 +45,8 @@ html lang="en"
     #header_wrapper
       = image_tag 'photo.jpg', class: 'right'
       #header.row
-        h1 Tango <small>salón<br/>com</small> Ganas
+        = link_to :root do
+          h1 Tango <small>salón<br/>com</small> Ganas
         h2 Laura Rosa <small>&</small> Daniel Weinmann
     #menu_wrapper
       #menu.row
