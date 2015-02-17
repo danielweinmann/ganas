@@ -1,11 +1,38 @@
 .content
   width: 92%
+  padding: 3rem 0 2rem
   @media #{$medium-up}
     width: 96%
-  padding: 3rem 0
+    padding: 5rem 0 4rem
+.tag
+  border: 2px dashed $skin
+  border-radius: 5px
+  padding: 0.2rem 3rem 0.4rem
 .vcard
   font-size: 2rem
-  background: $white
-  color: $brown
+  color: $skin
   .fn
     color: $skin
+    font-size: 1.5rem
+    margin-bottom: 0.5rem
+    @media #{$medium-up}
+      font-size: 2rem
+    @media #{$large-up}
+      font-size: 2.5rem
+  .photo
+    img
+      border-radius: 50%
+      margin-bottom: 2rem
+  .email
+    a
+      color: $dark-skin
+      &:hover
+        color: $medium-skin
+  .url
+    margin-top: -0.8rem
+    display: inline-block
+    i
+      color: $skin
+      font-size: 2.5rem
+      &:hover
+        color: $light-skin

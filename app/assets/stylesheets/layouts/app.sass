@@ -78,19 +78,25 @@
             padding: 0 1.5vw 0.3vw 1.5vw
         width: 50%
         width: 50vw
-#photos_wrapper
+#photos_wrapper, #newsletter_wrapper
   background: $skin
   h3
     color: $brown
+#photos_wrapper
+  .content
+    padding-bottom: 1.4rem
+    @media #{$medium-up}
+      padding-bottom: 3rem
 #videos_wrapper
   background: $ice-skin
   color: $brown
   h3
-    color: $brown
+    color: $medium-skin
   a
     color: $dark-skin
     &:hover
       color: $medium-skin
   p
-    font-size: 1.382rem
-#contact_wrapper
+    margin-bottom: 1rem
+    @media #{$medium-up}
+      font-size: 1.382rem

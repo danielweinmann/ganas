@@ -202,13 +202,13 @@ $body-font-color: $skin;
 $header-font-color: $skin;
 $header-line-height: 1.2;
 // $header-top-margin: 2rem;
-$header-bottom-margin: 2rem;
+$header-bottom-margin: 4rem;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
 $h1-font-size: rem-calc(132);
 $h2-font-size: rem-calc(52);
-$h3-font-size: rem-calc(38);
+$h3-font-size: rem-calc(32);
 // $h4-font-size: rem-calc(23);
 // $h5-font-size: rem-calc(18);
 // $h6-font-size: 1rem;
@@ -296,12 +296,12 @@ $microformat-padding: rem-calc(20 24);
 
 // We use these to control the border styles
 // $microformat-border-width: 1px;
-// $microformat-border-style: solid;
-$microformat-border-color: $skin;
+$microformat-border-style: none;
+// $microformat-border-color: $skin;
 
 // We use these to control full name font styles
 $microformat-fullname-font-weight: $font-weight-normal;
-$microformat-fullname-font-size: rem-calc(42);
+// $microformat-fullname-font-size: rem-calc(32);
 
 // We use this to control the summary font styles
 // $microformat-summary-font-weight: $font-weight-bold;
@@ -617,18 +617,18 @@ $button-bg-color: $primary-color;
 
 // We use these to style the labels in different ways
 // $form-label-pointer: pointer;
-// $form-label-font-size: rem-calc(14);
+// $form-label-font-size: rem-calc(32);
 // $form-label-font-weight: $font-weight-normal;
 // $form-label-line-height: 1.5;
-// $form-label-font-color: scale-color($black, $lightness: 30%);
+$form-label-font-color: $brown;
 // $form-label-small-transform: capitalize;
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
-// $input-font-color: rgba(0,0,0,0.75);
+$input-font-color: $brown;
 // $input-font-size: rem-calc(14);
 // $input-bg-color: $white;
 // $input-focus-bg-color: scale-color($white, $lightness: -2%);
-// $input-border-color: scale-color($white, $lightness: -20%);
+$input-border-color: $skin;
 // $input-focus-border-color: scale-color($white, $lightness: -40%);
 // $input-border-style: solid;
 // $input-border-width: 1px;

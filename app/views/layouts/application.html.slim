@@ -48,12 +48,11 @@ html lang="en"
               a href="#contact" Contato
     #classes_wrapper
       #classes.content.row data-magellan-destination="classes"
-        h3 Aulas
         .row
           .columns.small-12.medium-4
             ul class="pricing-table"
               li class="title" Terças-feiras
-              li class="description" Aulas regulares 2 vezes por semana
+              li class="description" 2 vezes por semana, das 20h às 21h
               li class="bullet-item" Com Laura Rosa e Daniel Weinmann
               li class="bullet-item"
                 p Studio de Dança Mara Noschang
@@ -71,7 +70,7 @@ html lang="en"
           .columns.small-12.medium-4
             ul class="pricing-table"
               li class="title" Quartas-feiras
-              li class="description" Aulas regulares 1 vez por semana
+              li class="description" 1 vez por semana, das 19h às 20h30
               li class="bullet-item" Com Daniel Weinmann
               li class="bullet-item"
                 p MEME Santo de Casa Estação Cultural
@@ -89,7 +88,7 @@ html lang="en"
           .columns.small-12.medium-4
             ul class="pricing-table"
               li class="title" Quintas-feiras
-              li class="description" Aulas regulares 2 vezes por semana
+              li class="description" 2 vezes por semana, das 20h às 21h
               li class="bullet-item" Com Laura Rosa e Daniel Weinmann
               li class="bullet-item"
                 p Studio de Dança Mara Noschang
@@ -106,7 +105,6 @@ html lang="en"
                 = mail_to 'contato@ganas.com.br', 'Quero me inscrever', class: 'button'
     #photos_wrapper
       #photos.content.row data-magellan-destination="photos"
-        h3 Fotos
         ul class="clearing-thumbs small-block-grid-3 medium-block-grid-5" data-clearing="true"
           - (1..9).each do |photo|
             li
@@ -114,25 +112,30 @@ html lang="en"
                 = image_tag "photos/0#{photo}_th.jpg", class: 'th'
     #videos_wrapper
       #videos.content.row data-magellan-destination="videos"
-        h3 Vídeos
         .flex-video
           iframe width="614" height="345" src="http://www.youtube.com/embed/RzE5RFCQFfU?showinfo=0&controls=0" frameborder="0" allowfullscreen
         p Inscreva-se em nosso #{ link_to 'canal no YouTube', 'http://youtube.com/subscription_center?add_user=ganastango', target: :blank } e veja mais vídeos!
     #newsletter_wrapper
       #newsletter.content.row data-magellan-destination="newsletter"
-        h3 Novidades
-        = form_tag "http://ganas.us10.list-manage.com/subscribe/post"
-          = hidden_field_tag 'u', '1f48ce3370d35fb1232544e29'
-          = hidden_field_tag 'id', '367de329f4'
-          = label_tag 'EMAIL', 'Receba nossas novidades em seu email'
-          = text_field_tag 'EMAIL', nil, placeholder: 'seu@email.com', label: 'email'
-          = submit_tag "Quero receber novidades por email"
+        div class="small-10 small-offset-1 medium-8 medium-offset-2 large-6 large-offset-3 columns"
+          h3 Receba nossas novidades em seu email<br/><small>E concorra todo mês a 1 mês de aulas grátis!</small>
+          = form_tag "http://ganas.us10.list-manage.com/subscribe/post"
+            = hidden_field_tag 'u', '1f48ce3370d35fb1232544e29'
+            = hidden_field_tag 'id', '367de329f4'
+            = text_field_tag 'EMAIL', nil, placeholder: 'seu@email.com', label: 'email'
+            = submit_tag "Quero receber novidades por email"
     #contact_wrapper
       #contact.content.row data-magellan-destination="contact"
-        h3 Contato
-        ul class="vcard small-6 small-offset-3 columns"
+        ul class="vcard small-10 small-offset-1 medium-8 medium-offset-2 large-6 large-offset-3 columns"
+          li class="photo row"
+            .small-6.small-offset-3.columns= image_tag 'profile.png'
           li class="fn" Laura Rosa e Daniel Weinmann
-          li class="org" Ganas
           li class="email"
             a href="mailto:contato@ganas.com.br" contato@ganas.com.br
           li class="tel" 51 9904-3244
+          li class="url"
+            a href="https://www.facebook.com/ganastango" target="_blank"
+              i class="fi-social-facebook"
+          li class="url"
+            a href="https://youtube.com/ganastango" target="_blank"
+              i class="fi-social-youtube"
