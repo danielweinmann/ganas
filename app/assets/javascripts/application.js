@@ -21,4 +21,8 @@
 //= require ganas
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function(){ $(document).foundation({
+  "magellan-expedition": {
+    destination_threshold: 0
+  }
+}); });
