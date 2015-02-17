@@ -132,13 +132,13 @@ html lang="en"
         p Inscreva-se em nosso #{ link_to 'canal no YouTube', 'http://youtube.com/subscription_center?add_user=ganastango', target: :blank } e veja mais vídeos!
     #newsletter_wrapper
       #newsletter.content.row data-magellan-destination="newsletter"
-        div class="small-10 small-offset-1 medium-8 medium-offset-2 large-6 large-offset-3 columns"
+        div class="small-10 small-offset-1 medium-8 medium-offset-2 columns"
           h3 Receba nossas novidades em seu email<br/><small>E concorra todo mês a 1 mês de aulas grátis!</small>
           = form_tag "http://ganas.us10.list-manage.com/subscribe/post"
             = hidden_field_tag 'u', '1f48ce3370d35fb1232544e29'
             = hidden_field_tag 'id', '367de329f4'
             = text_field_tag 'EMAIL', nil, placeholder: 'seu@email.com', label: 'email'
-            = submit_tag "Quero receber novidades por email"
+            = submit_tag "Quero receber novidades por email", class: 'small-12 columns'
     #contact_wrapper
       #contact.content.row data-magellan-destination="contact"
         ul class="vcard small-10 small-offset-1 medium-8 medium-offset-2 large-6 large-offset-3 columns"
