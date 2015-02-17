@@ -9,13 +9,13 @@ html lang="en"
       = yield :meta_tags
     - else
       / Meta tags for pages that don't have specific meta tags
-      meta name="description" content=strip_tags(yield :title)
+      meta name="description" content==strip_tags(content_for?(:description) ? yield(:description) : yield(:title))
       meta name="keywords" content="#{yield :title} Ganas"
-      meta property="og:title" content=yield(:title)
+      meta property="og:title" content==yield(:title)
       meta property="og:type" content="website"
       meta property="og:url" content=(content_for?(:url) ? yield(:url) : request.url)
-      meta property="og:image" content=="#{request.protocol}#{request.host_with_port}#{image_path("logo_facebook.png")}"
-      meta property="og:description" content=yield(:title)
+      meta property="og:image" content=="#{request.protocol}#{request.host_with_port}#{image_path("profile.png")}"
+      meta property="og:description" content==strip_tags(content_for?(:description) ? yield(:description) : yield(:title))
       meta name="author" content="Laura Rosa & Daniel Weinmann"
     / Metatags for every page
     meta property="og:site_name" content="Ganas"
@@ -27,6 +27,21 @@ html lang="en"
     = javascript_include_tag "application"
     = csrf_meta_tag
   body[data-namespace="#{namespace}" data-controller="#{controller_name}" data-action="#{action_name}" data-locale="#{I18n.locale}"]
+    javascript:
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '425920014241111',
+          xfbml      : true,
+          version    : 'v2.2'
+        });
+      };
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));    
     #header_wrapper
       = image_tag 'photo.jpg', class: 'right'
       #header.row
