@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
-  responders :flash, :location
+  responders :flash
 
   helper_method :namespace
 
