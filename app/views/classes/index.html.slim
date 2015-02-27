@@ -4,3 +4,117 @@
   = "Aprenda tango argentino de salão e descubra como sua vida pode se transformar através da dança"
 - content_for :url do
   = root_url
+#header_wrapper
+  = image_tag 'photo.jpg', class: 'right'
+  #header.row
+    = link_to :root do
+      h1 Tango <small>salón<br/>com</small> Ganas
+    h2 Laura Rosa <small>&</small> Daniel Weinmann
+#menu_wrapper
+  #menu.row
+    div data-magellan-expedition="fixed"
+      dl class="sub-nav"
+        dd data-magellan-arrival="classes"
+          a href="#classes" Aulas
+        dd data-magellan-arrival="photos"
+          a href="#photos" Fotos
+        dd data-magellan-arrival="videos"
+          a href="#videos" Vídeos
+        dd data-magellan-arrival="newsletter"
+          a href="#newsletter" Novidades
+        dd data-magellan-arrival="contact"
+          a href="#contact" Contato
+#classes_wrapper
+  #classes.content.row data-magellan-destination="classes"
+    h3= yield :description
+    .row          
+      .columns.small-12.medium-4
+        ul class="pricing-table"
+          li class="title" Terças-feiras
+          li class="description" 2 vezes por semana, das 20h às 21h
+          li class="bullet-item" Com Laura Rosa e Daniel Weinmann
+          li class="bullet-item"
+            p Studio de Dança Mara Noschang
+            a href="http://www.maranoschang.blogspot.com.br" target="_blank"
+              i class="fi-web"
+            a href="https://www.facebook.com/pages/Studio-de-Dan%C3%A7a-Mara-Noschang/210315652361363" target="_blank"
+              i class="fi-social-facebook"
+            a href="https://www.google.com.br/maps/place/Mara+Noschang/@-30.039881,-51.223454,17z/data=!3m1!4b1!4m2!3m1!1s0x95197901ce7d2461:0xa4a2a26deb90ee24?hl=pt-BR" target="_blank"
+              i class="fi-marker"
+          li class="bullet-item" Iniciantes e intermediários
+          li class="bullet-item" R$ 120/mês individual (terças + quintas)
+          li class="bullet-item" R$ 216/mês casal (terças + quintas)
+          li class="cta-button"
+            = mail_to 'contato@ganas.com.br', 'Quero me inscrever', class: 'button'
+      .columns.small-12.medium-4
+        ul class="pricing-table"
+          li class="title" Quartas-feiras
+          li class="description" 1 vez por semana, das 19h às 20h30
+          li class="bullet-item" Com Daniel Weinmann
+          li class="bullet-item"
+            p MEME Santo de Casa Estação Cultural
+            a href="http://www.centromeme.com.br/" target="_blank"
+              i class="fi-web"
+            a href="https://www.facebook.com/memesantodecasa" target="_blank"
+              i class="fi-social-facebook"
+            a href="https://www.google.com.br/maps/place/MEME+Santo+de+Casa+Esta%C3%A7%C3%A3o+Cultural/@-30.040721,-51.219208,17z/data=!3m1!4b1!4m2!3m1!1s0x95197855afabd067:0x518ae6c878fb0682?hl=pt-BR" target="_blank"
+              i class="fi-marker"
+          li class="bullet-item" Iniciantes
+          li class="bullet-item" R$ 90/mês individual
+          li class="bullet-item" R$ 160/mês casal
+          li class="cta-button"
+            = mail_to 'contato@ganas.com.br', 'Quero me inscrever', class: 'button'
+      .columns.small-12.medium-4
+        ul class="pricing-table"
+          li class="title" Quintas-feiras
+          li class="description" 2 vezes por semana, das 20h às 21h
+          li class="bullet-item" Com Laura Rosa e Daniel Weinmann
+          li class="bullet-item"
+            p Studio de Dança Mara Noschang
+            a href="http://www.maranoschang.blogspot.com.br" target="_blank"
+              i class="fi-web"
+            a href="https://www.facebook.com/pages/Studio-de-Dan%C3%A7a-Mara-Noschang/210315652361363" target="_blank"
+              i class="fi-social-facebook"
+            a href="https://www.google.com.br/maps/place/Mara+Noschang/@-30.039881,-51.223454,17z/data=!3m1!4b1!4m2!3m1!1s0x95197901ce7d2461:0xa4a2a26deb90ee24?hl=pt-BR" target="_blank"
+              i class="fi-marker"
+          li class="bullet-item" Iniciantes e intermediários
+          li class="bullet-item" R$ 120/mês individual (terças + quintas)
+          li class="bullet-item" R$ 216/mês casal (terças + quintas)
+          li class="cta-button"
+            = mail_to 'contato@ganas.com.br', 'Quero me inscrever', class: 'button'
+#photos_wrapper
+  #photos.content.row data-magellan-destination="photos"
+    ul class="clearing-thumbs small-block-grid-3 medium-block-grid-5" data-clearing="true"
+      - (1..9).each do |photo|
+        li
+          a href=image_path("photos/0#{photo}.jpg")
+            = image_tag "photos/0#{photo}_th.jpg", class: 'th'
+#videos_wrapper
+  #videos.content.row data-magellan-destination="videos"
+    .flex-video
+      iframe width="614" height="345" src="http://www.youtube.com/embed/RzE5RFCQFfU?showinfo=0&controls=0" frameborder="0" allowfullscreen
+    p Inscreva-se em nosso #{ link_to 'canal no YouTube', 'http://youtube.com/subscription_center?add_user=ganastango', target: :blank } e veja mais vídeos!
+#newsletter_wrapper
+  #newsletter.content.row data-magellan-destination="newsletter"
+    div class="small-10 small-offset-1 medium-8 medium-offset-2 columns"
+      h3 Receba nossas novidades em seu email<br/><small>E concorra todo mês a 1 mês de aulas grátis!</small>
+      = form_tag "http://ganas.us10.list-manage.com/subscribe/post"
+        = hidden_field_tag 'u', '1f48ce3370d35fb1232544e29'
+        = hidden_field_tag 'id', '367de329f4'
+        = text_field_tag 'EMAIL', nil, placeholder: 'seu@email.com', label: 'email'
+        = submit_tag "Quero receber novidades por email", class: 'small-12 columns'
+#contact_wrapper
+  #contact.content.row data-magellan-destination="contact"
+    ul class="vcard small-10 small-offset-1 medium-8 medium-offset-2 large-6 large-offset-3 columns"
+      li class="photo row"
+        div class="small-8 small-offset-2 medium-6 medium-offset-3 columns"= image_tag 'profile.png'
+      li class="fn" Laura Rosa e Daniel Weinmann
+      li class="email"
+        a href="mailto:contato@ganas.com.br" contato@ganas.com.br
+      li class="tel" 51 9904-3244
+      li class="url"
+        a href="https://www.facebook.com/ganastango" target="_blank"
+          i class="fi-social-facebook"
+      li class="url"
+        a href="https://youtube.com/ganastango" target="_blank"
+          i class="fi-social-youtube"

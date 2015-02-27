@@ -1,0 +1,20 @@
+- content_for :title do
+  = "Tango salón para iniciantes. Aulas regulares com Daniel Weinmann"
+- content_for :description do
+  = "Aprenda tango argentino de salão e descubra como sua vida pode se transformar através da dança"
+#header_wrapper
+  = image_tag 'photo.jpg', class: 'right'
+  #header.row
+    = link_to :root do
+      h1 Tango <small>salón<br/>para</small> iniciantes
+    h2 <small>Aulas regulares com</small> Daniel Weinmann
+#service_wrapper
+  #service.content.row
+    .service <small>TODAS AS</small> QUARTAS<small>, das </small>19h<small> às </small>20h30
+    .service MEME Santo de Casa <small>Estação Cultural</small>
+    .service.small Lopo Gonçalves, 176 · R$ 90/mês individual · R$ 160/mês casal
+#footer_wrapper
+  #footer.content.row
+    .service
+      = mail_to "contato@ganas.com.br"
+      = " · 51 9904-3244"
