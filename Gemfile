@@ -11,6 +11,7 @@ gem 'schema_plus'
 # Controller related
 gem 'responders'
 gem 'has_scope'
+gem 'gibbon'
 
 # Authentication and authorization
 gem 'devise'

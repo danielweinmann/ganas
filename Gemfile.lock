@@ -103,6 +103,9 @@ GEM
     foundation-rails (5.5.1.0)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
+    gibbon (1.1.5)
+      httparty
+      multi_json (>= 1.9.0)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
     has_scope (0.6.0)
@@ -111,6 +114,9 @@ GEM
     heroku-deflater (0.5.3)
       rack (>= 1.4.5)
     hike (1.2.3)
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     jbuilder (2.2.7)
       activesupport (>= 3.0.0, < 5)
@@ -133,6 +139,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.5.1)
     multi_json (1.10.1)
+    multi_xml (0.5.5)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
@@ -264,6 +271,7 @@ DEPENDENCIES
   devise-i18n-views!
   foundation-icons-sass-rails
   foundation-rails
+  gibbon
   has_scope
   heroku-deflater (>= 0.4.1)
   jbuilder

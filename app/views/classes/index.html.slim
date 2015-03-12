@@ -101,6 +101,7 @@
       = form_tag "http://ganas.us10.list-manage.com/subscribe/post"
         = hidden_field_tag 'u', '1f48ce3370d35fb1232544e29'
         = hidden_field_tag 'id', '367de329f4'
+        = text_field_tag 'NAME', nil, placeholder: 'Seu nome', label: 'name'
         = text_field_tag 'EMAIL', nil, placeholder: 'seu@email.com', label: 'email'
         = submit_tag "Quero receber novidades por email", class: 'small-12 columns'
 #contact_wrapper

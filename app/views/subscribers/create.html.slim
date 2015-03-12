@@ -1,0 +1,15 @@
+- content_for :title do
+  = "Receba nossas novidades em seu email e concorra todo mês a 1 mês de aulas grátis!"
+- content_for :description do
+  = "Aprenda tango argentino de salão e descubra como sua vida pode se transformar através da dança"
+- content_for :external_js do
+  = render 'facebook_conversion'
+#subscriber_wrapper
+  #subscriber.content.row
+    ul class="vcard small-10 small-offset-1 medium-8 medium-offset-2 large-6 large-offset-3 columns"
+      li class="photo row"
+        div class="small-8 small-offset-2 medium-6 medium-offset-3 columns"= image_tag 'profile.png'
+    .row
+      div class="small-10 small-offset-1 medium-8 medium-offset-2 columns"
+        h3 Sua inscrição foi realizada com sucesso!<br/><small>Em breve você receberá novidades em seu email.</small>
+        h4 Que tal agora conhecer #{ link_to 'nosso site', root_path }?

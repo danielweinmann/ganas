@@ -1,0 +1,22 @@
+- content_for :title do
+  = "Receba nossas novidades em seu email e concorra todo mês a 1 mês de aulas grátis!"
+- content_for :description do
+  = "Aprenda tango argentino de salão e descubra como sua vida pode se transformar através da dança"
+#header_wrapper
+  = image_tag 'photo.jpg', class: 'right'
+  #header.row
+    h1 Tango <small>salón<br/>com</small> Ganas
+    h2 Laura Rosa <small>&</small> Daniel Weinmann
+#subscriber_wrapper
+  #subscriber.content.row
+    div class="small-10 small-offset-1 medium-8 medium-offset-2 columns"
+      h3 Receba nossas novidades em seu email<br/><small>E concorra todo mês a 1 mês de aulas grátis!</small>
+      - if alert.present?
+        div data-alert=true class="alert-box alert"
+          = alert
+          a href="#" class="close" &times;
+      = form_tag subscribers_path
+        = hidden_field_tag 'id', '367de329f4'
+        = text_field_tag 'NAME', nil, placeholder: 'Seu nome', label: 'name'
+        = text_field_tag 'EMAIL', nil, placeholder: 'seu@email.com', label: 'email'
+        = submit_tag "Quero concorrer todo mês a 1 mês de aulas grátis", class: 'small-12 columns'
